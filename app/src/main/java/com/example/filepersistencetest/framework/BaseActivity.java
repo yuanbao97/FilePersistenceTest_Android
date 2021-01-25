@@ -3,7 +3,6 @@ package com.example.filepersistencetest.framework;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -65,7 +64,6 @@ public class BaseActivity extends AppCompatActivity {
 
     //隐藏软键盘并让editText失去焦点
     private void hideKeyboard(IBinder token) {
-        Log.e(getClass().getSimpleName(), "hideKeyboard");
         clearFocus();
         if (token != null) {
             //这里先获取InputMethodManager再调用他的方法来关闭软键盘
